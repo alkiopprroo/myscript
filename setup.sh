@@ -72,6 +72,6 @@ then
 	mkdir ~/app_def
 	cp zellij ~/app_def/zellij
 	chmod a+x ~/app_def/zellij
-	echo alias "div='~/app_def/zellij'" >> ~/.zshrc
+	echo alias "div='~/app_def/zellij options --disable-mouse-mode'" >> ~/.zshrc
 	zsh
 fi
