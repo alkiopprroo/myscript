@@ -70,7 +70,9 @@ fi
 if [ $var_opcion = 4 ]
 then
 	mkdir ~/app_def
+	mkdir ~/.config/zellij
 	cp zellij ~/app_def/zellij
+	cp config.yaml ~/.config/zellij
 	chmod a+x ~/app_def/zellij
 	echo alias "div='~/app_def/zellij options --disable-mouse-mode'" >> ~/.zshrc
 	zsh
