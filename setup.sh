@@ -1,10 +1,9 @@
 #!/bin/sh
-
-
 echo "[ + ] ( 1 ) - Cambiar Host"
 echo "[ + ] ( 2 ) - Cambiar IP"
-echo "[ + ] ( 3 ) - Instalar def" 
-echo "[ + ] ( 4 ) - Instalar term div ejecutar desde la ruta" 
+echo "[ + ] ( 3 ) - Instalar apts" 
+echo "[ + ] ( 4 ) - Instalar zsh" 
+echo "[ + ] ( 5 ) - Instalar term div ejecutar desde la ruta" 
 
 read var_opcion
 if [ $var_opcion = 1 ]
@@ -50,30 +49,39 @@ if [ $var_opcion = 3 ]
 then
 	# APTs
 	apt update -y
-	apt install neovim vim vifm tmux git curl gut-core htop neofetch -y
-	
-	#ZSH
-	apt install zsh -y
-	
-	# FONTS & STYLES 
-	apt install fonts-powerline -y
-	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s
-	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-	perl -pi -e "s[robbyrussell][fino]g" ~/.zshrc
-	
-	# ADDs
-	echo neofetch >> ~/.zshrc
-	echo alias "ll='ls -l'" >> .zshrc
-	echo alias "lh='ls -lh' | more" >> .zshrc
-	source ~/.zshrc
+
+	apt install neovim -y 
+	apt install vifm -y
+	apt install tmux -y
+	apt install curl -y
+	apt install git -y
+	apt install git-core -y 
+	apt install htop -y
+	apt install neofetch -y
 fi
 if [ $var_opcion = 4 ]
 then
+	#ZSH
+	apt install zsh -y
+	
+	# OHMYZSH + FONTS & STYLES 
+	apt install fonts-powerline -y
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s
+	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+	perl -pi -e "s[robbyrussell][powerlevel10k/powerlevel10k]g" ~/.zshrc
+	
+	# ADDs 
+	echo alias "ll='ls -l'" >> .zshrc
+	echo alias "lh='ls -lh' | more" >> .zshrc
+	source ~/.zshrc
+	exit
+	zsh
+fi
+if [ $var_opcion = 5 ]
+then
 	mkdir ~/app_def
-	mkdir ~/.config/zellij
 	cp zellij ~/app_def/zellij
-	cp config.yaml ~/.config/zellij
 	chmod a+x ~/app_def/zellij
-	echo alias "div='~/app_def/zellij options --disable-mouse-mode'" >> ~/.zshrc
+	echo alias "div='~/app_def/zellij'" >> ~/.zshrc
 	zsh
 fi
