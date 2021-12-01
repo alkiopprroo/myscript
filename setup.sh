@@ -69,6 +69,7 @@ then
 	apt install git-core -y 
 	apt install htop -y
 	apt install neofetch -y
+	apt install tree -y
 fi
 
 if [ $var_opcion = 5 ]
