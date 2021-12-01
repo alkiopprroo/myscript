@@ -85,6 +85,7 @@ then
 	# ADDs 
 	echo alias "ll='ls -l'" >> .zshrc
 	echo alias "lh='ls -lh' | more" >> .zshrc
+	echo alias "v ='vim'" >> .zshrc
 	source ~/.zshrc
 	exit
 	zsh
