@@ -44,7 +44,7 @@ auto "$new_interface"
 iface "$new_interface" inet static
 	address "$new_address"
         netmask "$new_netmask"
-        network "$new_gateway > /etc/network/interfaces
+        gateway "$new_gateway > /etc/network/interfaces
     ifdown $new_interface
     ifup $new_interface
     systemctl restart networking.service
