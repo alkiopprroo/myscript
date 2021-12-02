@@ -90,7 +90,7 @@ then
 	echo alias "z='zsh'" >> ~/.bashrc
 	echo alias "ll='ls -l'" >> ~/.zshrc
 	echo alias "lh='ls -lh' | more" >> ~/.zshrc
-	echo alias "v ='nvim'" >> ~/.zshrc
+	echo alias "v='nvim'" >> ~/.zshrc
 	source ~/.zshrc
 	echo " z = zsh // ll = ls -l // lh = ls -lh // v = nvim "
 fi
