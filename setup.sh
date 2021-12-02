@@ -5,7 +5,8 @@ echo "[ + ] ( 2 ) - Cambiar IP"
 echo "[ + ] ( 3 ) - Cambiar resolv"
 echo "[ + ] ( 4 ) - Instalar apts" 
 echo "[ + ] ( 5 ) - Instalar zsh" 
-echo "[ + ] ( 6 ) - Instalar term div ejecutar desde la ruta" 
+echo "[ + ] ( 6 ) - Alias" 
+echo "[ + ] ( 7 ) - Instalar term div ejecutar desde la ruta" 
 
 read var_opcion
 
@@ -82,17 +83,19 @@ then
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s
 	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 	perl -pi -e "s[robbyrussell][powerlevel10k/powerlevel10k]g" ~/.zshrc
-
+fi
+if [ $var_opcion = 6 ]
+then
 	# ADDs 
-	echo alias "ll='ls -l'" >> .zshrc
-	echo alias "lh='ls -lh' | more" >> .zshrc
-	echo alias "v ='vim'" >> .zshrc
+	echo alias "z='zsh'" >> ~/.bashrc
+	echo alias "ll='ls -l'" >> ~/.zshrc
+	echo alias "lh='ls -lh' | more" >> ~/.zshrc
+	echo alias "v ='nvim'" >> ~/.zshrc
 	source ~/.zshrc
-	exit
-	zsh
+	echo " z = zsh // ll = ls -l // lh = ls -lh // v = nvim "
 fi
 
-if [ $var_opcion = 6 ]
+if [ $var_opcion = 7 ]
 then
 	mkdir ~/app_def
 	cp zellij ~/app_def/zellij
