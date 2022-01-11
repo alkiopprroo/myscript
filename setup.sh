@@ -99,8 +99,9 @@ if [ $var_opcion = 7 ]
 then
 	mkdir ~/app_def
 	cp zellij ~/app_def/zellij
+	cp config.yaml ~/app_def/config.yaml
 	chmod a+x ~/app_def/zellij
-	echo alias "div='~/app_def/zellij'" >> ~/.zshrc
+	echo alias "div='~/app_def/zellij -c ~/app_def/config.yaml'" >> ~/.zshrc
 	zsh
 fi
 
