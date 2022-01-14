@@ -1,12 +1,16 @@
 #!/bin/sh
 
+mkdir ~/.app_def
+
+
 echo "[ + ] ( 1 ) - Cambiar Host"
 echo "[ + ] ( 2 ) - Cambiar IP"
 echo "[ + ] ( 3 ) - Cambiar resolv"
-echo "[ + ] ( 4 ) - Instalar apts" 
-echo "[ + ] ( 5 ) - Instalar zsh" 
-echo "[ + ] ( 6 ) - Alias" 
-echo "[ + ] ( 7 ) - Instalar term div ejecutar desde la ruta" 
+echo "[ + ] ( 4 ) - Instalar apts"
+echo "[ + ] ( F ) - Fonts ( ROOT ) "
+echo "[ + ] ( 5 ) - Instalar zsh + zshrc + div " 
+#echo "[ + ] ( 6 ) - Alias" 
+#echo "[ + ] ( 7 ) - Instalar term div ejecutar desde la ruta" 
 
 read var_opcion
 
@@ -73,42 +77,59 @@ then
 	apt install tree -y
 fi
 
+if [ $var_opcion = 'F' ]
+then
+	cd /usr/local/share/fonts
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+	unzip Hack.zip
+	rm Hack.zip
+fi
+
 if [ $var_opcion = 5 ]
 then
 	#ZSH
 	apt install zsh -y
 	
-	#COPY
+	#COPYS
 	cp p10k.zsh ~/.p10k.zsh
 	cp zshrc ~/.zshrc
+	cp zellij ~/app_def/zellij
+	cp config.yaml ~/app_def/config.yaml
+	chmod a+x ~/app_def/zellij
 
 	#PLUGIN
+	mmkdir ~/.app_def/zsh-plugins
+	cd ~/.zsh-plugins
+
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 	echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
 
+	wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
+	
+	cd ~ 
+	
 	# OHMYZSH + FONTS & STYLES 
 	apt install fonts-powerline -y
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s
 	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 fi
-if [ $var_opcion = 6 ]
-then
-	# ADDs 
-	echo alias "z='zsh'" >> ~/.bashrc
-	echo alias "ll='ls -l'" >> ~/.zshrc
-	echo alias "lh='ls -lh' | more" >> ~/.zshrc
-	echo alias "v='nvim'" >> ~/.zshrc
-	source ~/.zshrc
-	echo " z = zsh // ll = ls -l // lh = ls -lh // v = nvim "
-fi
+#if [ $var_opcion = 6 ]
+#then
+	## ADDs 
+	#echo alias "z='zsh'" >> ~/.bashrc
+	#echo alias "ll='ls -l'" >> ~/.zshrc
+	#echo alias "lh='ls -lh' | more" >> ~/.zshrc
+	#echo alias "nv='nvim -u ~/.app_def/nvim.conf'" >> ~/.zshrc
+	#source ~/.zshrc
+	#echo " z = zsh // ll = ls -l // lh = ls -lh // v = nvim "
+#fi
 
-if [ $var_opcion = 7 ]
-then
-	mkdir ~/app_def
-	cp zellij ~/app_def/zellij
-	cp config.yaml ~/app_def/config.yaml
-	chmod a+x ~/app_def/zellij
-	echo alias "div='~/app_def/zellij -c ~/app_def/config.yaml options --disable-mouse-mode'" >> ~/.zshrc
-	zsh
-fi
+#if [ $var_opcion = 7 ]
+#then
+	#cp zellij ~/app_def/zellij
+	#cp config.yaml ~/app_def/config.yaml
+	#chmod a+x ~/app_def/zellij
+	#echo alias "div='~/app_def/zellij -c ~/app_def/config.yaml options --disable-mouse-mode'" >> ~/.zshrc
+	#zsh
+#fi
 
