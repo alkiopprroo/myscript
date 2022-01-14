@@ -79,8 +79,8 @@ then
 	apt install zsh -y
 	
 	#COPY
-	cp .p10k.zsh ~/
-	cp .zshrc ~/
+	cp p10k.zsh ~/.p10k.zsh
+	cp zshrc ~/.zshrc
 
 	#PLUGIN
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
