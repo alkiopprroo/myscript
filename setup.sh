@@ -93,9 +93,9 @@ then
 	#COPYS
 	cp p10k.zsh ~/.p10k.zsh
 	cp zshrc ~/.zshrc
-	cp zellij ~/app_def/zellij
-	cp config.yaml ~/app_def/config.yaml
-	chmod a+x ~/app_def/zellij
+	cp zellij ~/.app_def/zellij
+	cp config.yaml ~/.app_def/config.yaml
+	chmod a+x ~/.app_def/zellij
 
 	#PLUGIN
 	mmkdir ~/.app_def/zsh-plugins
