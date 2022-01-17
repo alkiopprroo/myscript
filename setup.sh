@@ -95,6 +95,7 @@ then
 	cp zshrc ~/.zshrc
 	cp zellij ~/.app_def/zellij
 	cp config.yaml ~/.app_def/config.yaml
+	cp nvim.conf ~/.app_def/nvim.conf
 	chmod a+x ~/.app_def/zellij
 
 	#PLUGIN
