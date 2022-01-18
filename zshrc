@@ -77,7 +77,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colorize)
+
+ZSH_COLORIZE_STYLE="colorful"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,6 +116,7 @@ alias lh='ls -lh' | more
 alias cat='bat'
 alias nv='nvim -u ~/.app_def/nvim.conf'
 alias nvim='nvim -u ~/.app_def/nvim.conf'
+alias install='dpkg -i '
 alias div='~/.app_def/zellij -c ~/.app_def/config.yaml options --disable-mouse-mode'
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
