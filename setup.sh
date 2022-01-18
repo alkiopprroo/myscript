@@ -1,6 +1,8 @@
 #!/bin/sh
 
 mkdir ~/.app_def
+mkdir ~/.app_def/zsh-plugins
+
 
 
 echo "[ + ] ( 1 ) - Cambiar Host"
@@ -101,8 +103,7 @@ then
 	chmod a+x ~/.app_def/zellij
 
 	#PLUGIN
-	mmkdir ~/.app_def/zsh-plugins
-	cd ~/.zsh-plugins
+	cd ~/.app_def/zsh-plugins
 
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
