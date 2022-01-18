@@ -75,6 +75,7 @@ then
 	apt install htop -y
 	apt install neofetch -y
 	apt install tree -y
+	apt install bat -y
 fi
 
 if [ $var_opcion = 'F' ]
