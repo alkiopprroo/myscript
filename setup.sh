@@ -75,7 +75,8 @@ then
 	apt install htop -y
 	apt install neofetch -y
 	apt install tree -y
-	apt install bat -y
+	https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
+	dpkg -i bat_0.19.0_amd64.deb 
 fi
 
 if [ $var_opcion = 'F' ]
