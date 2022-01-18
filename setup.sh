@@ -75,9 +75,11 @@ then
 	apt install git -y
 	apt install git-core -y 
 	apt install htop -y
+	apt install wget -y
+	apt install git -y
 	apt install neofetch -y
 	apt install tree -y
-	https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
+	wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
 	dpkg -i bat_0.19.0_amd64.deb 
 fi
 
