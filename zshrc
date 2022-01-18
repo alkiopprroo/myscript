@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias ll='ls -l'
 alias lh='ls -lh' | more
-alias cat='batcat'
+alias cat='bat'
 alias nv='nvim -u ~/.app_def/nvim.conf'
 alias nvim='nvim -u ~/.app_def/nvim.conf'
 alias div='~/.app_def/zellij -c ~/.app_def/config.yaml options --disable-mouse-mode'
