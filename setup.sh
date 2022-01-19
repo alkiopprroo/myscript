@@ -27,7 +27,7 @@ then
 fi 
 
 if [ $var_opcion = 2 ]
-thena
+then
 	echo "nueva IP ( def = 192.168.1.X ): "
 	read new_address
     	echo "nueva mascara (def = 255.255.255.0 ): "
