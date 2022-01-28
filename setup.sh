@@ -79,8 +79,31 @@ then
 	apt install git -y
 	apt install neofetch -y
 	apt install tree -y
+	
+	#Alacritty
+	apt-get install cmake -y
+	apt-get install pkg-config -y
+	apt-get install libfreetype6-dev -y
+	apt-get install libfontconfig1-dev -y
+	apt-get install libxcb-xfixes0-dev -y
+	apt-get install libxkbcommon-dev  -y
+	apt-get install python3 -y
+	git clone https://github.com/alacritty/alacritty.git
+	cd alacritty
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+	source $HOME/.cargo/env 
+	rustup override set stable
+	cargo build --release
+	sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+	sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+	sudo desktop-file-install extra/linux/Alacritty.desktop
+	sudo update-desktop-database
+	sudo cp alacritty.yml /usr/share
+	
+	#CAT
 	wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
 	dpkg -i bat_0.19.0_amd64.deb 
+	
 fi
 
 if [ $var_opcion = 'F' ]
