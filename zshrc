@@ -124,5 +124,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.app_def/zsh-plugins/sudo.plugin.zsh
-source ~/.app_def/zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/.app_def/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.app_def/zsh-plugins/web-search.plugin.zsh  
 
