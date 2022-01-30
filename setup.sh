@@ -131,6 +131,7 @@ then
 	cd ~/.app_def/zsh-plugins
 
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+	git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
 
 	wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 	
