@@ -123,5 +123,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-neofetch
 source ~/.app_def/zsh-plugins/sudo.plugin.zsh
+source ~/.app_def/zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
