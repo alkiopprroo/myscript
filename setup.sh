@@ -125,6 +125,7 @@ then
 	cp zellij ~/.app_def/zellij
 	cp config.yaml ~/.app_def/config.yaml
 	cp nvim.conf ~/.app_def/nvim.conf
+	cp web-search.plugin.zsh ~/app_def/zsh-plugins
 	chmod a+x ~/.app_def/zellij
 
 	#PLUGIN
@@ -132,6 +133,7 @@ then
 
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 	git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 	wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 	
