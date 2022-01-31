@@ -125,7 +125,7 @@ then
 	cp zellij ~/.app_def/zellij
 	cp config.yaml ~/.app_def/config.yaml
 	cp nvim.conf ~/.app_def/nvim.conf
-	cp web-search.plugin.zsh ~/app_def/zsh-plugins
+	cp web-search.plugin.zsh ~/.app_def/zsh-plugins
 	chmod a+x ~/.app_def/zellij
 
 	#PLUGIN
