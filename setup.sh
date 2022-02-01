@@ -99,7 +99,7 @@ then
 	sudo desktop-file-install extra/linux/Alacritty.desktop
 	sudo update-desktop-database
 	sudo cp alacritty.yml /usr/share
-	
+	export TERM=xterm-256color
 	#CAT
 	wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
 	dpkg -i bat_0.19.0_amd64.deb 
