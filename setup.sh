@@ -146,8 +146,16 @@ then
 	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 fi
 if [ $var_opcion = 6 ]
-	apt install pip
-	apt install npm
+then
+	apt install pip -y
+	apt install npm -y
+	apt install ranger -y
+	apt install apt installueberzug -y
+	apt install ripgrep -y
+	apt install silver_searcher -y
+	apt install fd -y
+	apt install universal-ctags  -y
+	apt install lazy git  -y
 	git clone https://gitlab.com/claudiobrt/nvim.git ~/.config/nvim
 	unalias nvim
 fi
