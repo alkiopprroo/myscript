@@ -115,7 +115,7 @@ alias ll='ls -l'
 alias lh='ls -lh' | more
 alias cat='bat'
 alias nv='nvim -u ~/.app_def/nvim.conf'
-alias nvim='nvim -u ~/.app_def/nvim.conf'
+#alias nvim='nvim -u ~/.app_def/nvim.conf'
 alias install='dpkg -i '
 alias div='~/.app_def/zellij -c ~/.app_def/config.yaml options --disable-mouse-mode'
 source ~/powerlevel10k/powerlevel10k.zsh-theme
