@@ -11,6 +11,7 @@ echo "[ + ] ( 3 ) - Cambiar resolv"
 echo "[ + ] ( 4 ) - Instalar apts"
 echo "[ + ] ( F ) - Fonts ( ROOT ) "
 echo "[ + ] ( 5 ) - Instalar zsh + zshrc + div " 
+echo "[ + ] ( 6 ) - Instalar nvim-code " 
 #echo "[ + ] ( 6 ) - Alias" 
 #echo "[ + ] ( 7 ) - Instalar term div ejecutar desde la ruta" 
 
@@ -144,6 +145,15 @@ then
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s
 	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 fi
+if [ $var_opcion = 6 ]
+	apt install pip
+	apt install npm
+	git clone https://gitlab.com/claudiobrt/nvim.git ~/.config/nvim
+	unalias nvim
+fi
+
+
+
 #if [ $var_opcion = 6 ]
 #then
 	## ADDs 
