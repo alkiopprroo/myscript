@@ -127,3 +127,4 @@ source ~/.app_def/zsh-plugins/sudo.plugin.zsh
 source ~/.app_def/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.app_def/zsh-plugins/web-search.plugin.zsh  
 
+export PATH=$HOME/.local/bin:$PATH  
