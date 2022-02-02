@@ -104,6 +104,8 @@ then
 	#CAT
 	wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
 	dpkg -i bat_0.19.0_amd64.deb 
+	wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
+	dpkg -i lsd_0.21.0_amd64.deb 
 	
 fi
 
