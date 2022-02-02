@@ -111,9 +111,13 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-alias ll='ls -l'
-alias lh='ls -lh' | more
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias lla='lsd -lha --group-dirs=first'
+alias ls='lsd --group-dirs=first'a
 alias cat='bat'
+alias bus='fzf'
 alias nv='nvim -u ~/.app_def/nvim.conf'
 #alias nvim='nvim -u ~/.app_def/nvim.conf'
 alias install='dpkg -i '
@@ -123,8 +127,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+source ~/.app_def/zsh-plugins/web-search.plugin.zsh 
 source ~/.app_def/zsh-plugins/sudo.plugin.zsh
 source ~/.app_def/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.app_def/zsh-plugins/web-search.plugin.zsh  
 
-export PATH=$HOME/.local/bin:$PATH  
