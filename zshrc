@@ -118,6 +118,7 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'a
 alias cat='bat'
 alias bus='fzf'
+alias rmf='rm -rfv' 
 alias nv='nvim -u ~/.app_def/nvim.conf'
 #alias nvim='nvim -u ~/.app_def/nvim.conf'
 alias install='dpkg -i '
