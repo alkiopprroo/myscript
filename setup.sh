@@ -67,6 +67,7 @@ fi
 
 if [ $var_opcion = 4 ]
 then
+	export TERM=xterm-256color
 	# APTs
 	apt update -y
 	apt install neovim -y 
@@ -80,7 +81,11 @@ then
 	apt install git -y
 	apt install neofetch -y
 	apt install tree -y
-	
+	#CAT
+	wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
+	dpkg -i bat_0.19.0_amd64.deb 
+	wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
+	dpkg -i lsd_0.21.0_amd64.deb 
 	#Alacritty
 	apt-get install cmake -y
 	apt-get install pkg-config -y
@@ -100,12 +105,7 @@ then
 	sudo desktop-file-install extra/linux/Alacritty.desktop
 	sudo update-desktop-database
 	sudo cp alacritty.yml /usr/share
-	export TERM=xterm-256color
-	#CAT
-	wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
-	dpkg -i bat_0.19.0_amd64.deb 
-	wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
-	dpkg -i lsd_0.21.0_amd64.deb 
+	
 	
 fi
 
