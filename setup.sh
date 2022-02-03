@@ -159,7 +159,7 @@ then
 	apt install fd -y
 	apt install universal-ctags  -y
 	apt install lazy git  -y
-	bash <(curl -s https://gitlab.com/claudiobrt/nvim-code/-/raw/master/utils/install.sh)
+	echo 'bash <(curl -s https://gitlab.com/claudiobrt/nvim-code/-/raw/master/utils/install.sh)'
 	unalias nvim
 fi
 
