@@ -151,6 +151,8 @@ fi
 if [ $var_opcion = 6 ]
 then
 	apt install pip -y
+	apt-get install python-pip -y
+	apt-get install python3-pip -y
 	apt install npm -y
 	apt install ranger -y
 	apt install apt installueberzug -y
