@@ -132,3 +132,5 @@ source ~/.app_def/zsh-plugins/web-search.plugin.zsh
 source ~/.app_def/zsh-plugins/sudo.plugin.zsh
 source ~/.app_def/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+export TERM=xterm-256color
+
