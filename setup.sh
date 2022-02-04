@@ -99,6 +99,7 @@ then
 	wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
 	dpkg -i lsd_0.21.0_amd64.deb 
 	#Alacritty
+	sudo cp alacritty.yml /usr/share
 	apt-get install cmake -y
 	apt-get install pkg-config -y
 	apt-get install libfreetype6-dev -y
@@ -116,7 +117,6 @@ then
 	sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 	sudo desktop-file-install extra/linux/Alacritty.desktop
 	sudo update-desktop-database
-	sudo cp alacritty.yml /usr/share
 	
 	
 fi
