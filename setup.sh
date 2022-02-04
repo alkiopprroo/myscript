@@ -82,6 +82,17 @@ then
 	apt install neofetch -y
 	apt install tree -y
 	apt install fzf -y
+	apt install pip -y
+	apt-get install python-pip -y
+	apt-get install python3-pip -y
+	apt install npm -y
+	apt install ranger -y
+	apt install apt installueberzug -y
+	apt install ripgrep -y
+	apt install silver_searcher -y
+	apt install fd -y
+	apt install universal-ctags  -y
+	apt install lazy git  -y
 	#CAT
 	wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
 	dpkg -i bat_0.19.0_amd64.deb 
@@ -150,17 +161,6 @@ then
 fi
 if [ $var_opcion = 6 ]
 then
-	apt install pip -y
-	apt-get install python-pip -y
-	apt-get install python3-pip -y
-	apt install npm -y
-	apt install ranger -y
-	apt install apt installueberzug -y
-	apt install ripgrep -y
-	apt install silver_searcher -y
-	apt install fd -y
-	apt install universal-ctags  -y
-	apt install lazy git  -y
 	echo ''
 	echo 'bash <(curl -s https://gitlab.com/claudiobrt/nvim-code/-/raw/master/utils/install.sh)'
 	echo ''
