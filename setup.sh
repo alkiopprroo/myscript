@@ -67,6 +67,7 @@ fi
 
 if [ $var_opcion = 4 ]
 then
+	export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 	export TERM=xterm-256color
 	# APTs
 	apt update -y
