@@ -9,9 +9,10 @@ echo "[ + ] ( 1 ) - Cambiar Host"
 echo "[ + ] ( 2 ) - Cambiar IP"
 echo "[ + ] ( 3 ) - Cambiar resolv"
 echo "[ + ] ( 4 ) - Instalar apts"
-echo "[ + ] ( F ) - Fonts ( ROOT ) "
-echo "[ + ] ( 5 ) - Instalar zsh + zshrc + div " 
-echo "[ + ] ( 6 ) - Instalar nvim-code " 
+echo "[ + ] ( F ) - Fonts ( ROOT )"
+echo "[ + ] ( 5 ) - Instalar zsh + zshrc + div" 
+echo "[ + ] ( 6 ) - Instalar nvim-code"
+echo "[ + ] ( 7 ) - Instalar hamachi" 
 #echo "[ + ] ( 6 ) - Alias" 
 #echo "[ + ] ( 7 ) - Instalar term div ejecutar desde la ruta" 
 
@@ -96,9 +97,11 @@ then
 	apt install lazy git  -y
 	#CAT
 	wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
-	dpkg -i bat_0.19.0_amd64.deb 
+	dpkg -i bat_*
+	rm bat_*
 	wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
-	dpkg -i lsd_0.21.0_amd64.deb 
+	dpkg -i lsd_*
+	rm lsd_*
 	#Alacritty
 	sudo cp alacritty.yml /usr/share
 	apt-get install cmake -y
@@ -166,6 +169,12 @@ then
 	echo 'bash <(curl -s https://gitlab.com/claudiobrt/nvim-code/-/raw/master/utils/install.sh)'
 	echo ''
 	unalias nvim
+fi
+if [ $var_opcion = 7 ]
+then
+	wget https://www.vpn.net/installers/logmein-hamachi_2.1.0.203-1_amd64.deb
+	dpkg -i logmein-*
+	rm logmein-*
 fi
 
 
