@@ -138,8 +138,13 @@ then
 	#ZSH
 	apt install zsh -y
 	
+	# OHMYZSH + FONTS & STYLES 
+	apt install fonts-powerline -y
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s
+	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+	
 	#COPYS
-	cp p10k.zsh ~/.p10k.zsh
+	cp p10k.zsh.2 ~/.p10k.zsh
 	cp zshrc ~/.zshrc
 	cp zellij ~/.app_def/zellij
 	cp config.yaml ~/.app_def/config.yaml
@@ -157,11 +162,7 @@ then
 	wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
 	
 	cd ~ 
-	
-	# OHMYZSH + FONTS & STYLES 
-	apt install fonts-powerline -y
-	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s
-	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+	source ~/.zshrc	
 fi
 if [ $var_opcion = 6 ]
 then
