@@ -10,7 +10,6 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -117,13 +116,23 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias lr='ll -R'
-alias cat='bat'
+alias cat='batcat'
 alias bus='fzf'
 alias rmf='rm -rfv' 
 alias nv='nvim -u ~/.app_def/nvim.conf'
 #alias nvim='nvim -u ~/.app_def/nvim.conf'
 alias install='dpkg -i '
+
+alias apps='ll /usr/local/bin'
+
 alias div='~/.app_def/zellij -c ~/.app_def/config.yaml options --disable-mouse-mode'
+
+alias casa='xfreerdp /v:192.168.1.39 /u:alkiopprroo@hotmail.com /cert-ignore /dynamic-resolution +auto-reconnect +clipboard +home-drive'
+alias casaham='xfreerdp /v:25.19.235.84 /u:alkiopprroo@hotmail.com /cert-ignore /dynamic-resolution +auto-reconnect +clipboard +home-drive'
+alias rem='xfreerdp /v:192.168.122.130 /u:alkio /cert-ignore /dynamic-resolution +auto-reconnect +clipboard +home-drive'
+alias kali='ssh kali@192.168.122.21 -X '
+alias s='sudo'
+alias app='sudo winapps'
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -134,4 +143,4 @@ source ~/.app_def/zsh-plugins/sudo.plugin.zsh
 source ~/.app_def/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export TERM=xterm-256color
-
+export LIBVIRT_DEFAULT_URI=qemu:///system
