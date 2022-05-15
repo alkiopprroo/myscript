@@ -127,9 +127,7 @@ alias apps='ll /usr/local/bin'
 
 alias div='~/.app_def/zellij -c ~/.app_def/config.yaml options --disable-mouse-mode'
 
-alias casa='xfreerdp /v:192.168.1.39 /u:alkiopprroo@hotmail.com /cert-ignore /dynamic-resolution +auto-reconnect +clipboard +home-drive'
-alias casaham='xfreerdp /v:25.19.235.84 /u:alkiopprroo@hotmail.com /cert-ignore /dynamic-resolution +auto-reconnect +clipboard +home-drive'
-alias rem='xfreerdp /v:192.168.122.130 /u:alkio /cert-ignore /dynamic-resolution +auto-reconnect +clipboard +home-drive'
+alias casa='xfreerdp /u: /cert-ignore /dynamic-resolution +auto-reconnect +clipboard +home-drive'
 alias kali='ssh kali@192.168.122.21 -X '
 alias s='sudo'
 alias app='sudo winapps'
