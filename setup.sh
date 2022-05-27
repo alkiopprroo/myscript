@@ -139,6 +139,8 @@ then
 	apt install zsh -y
 	
 	# OHMYZSH + FONTS & STYLES 
+	apt install curl -y
+	apt install wget -y
 	apt install fonts-powerline -y
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s
 	git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
